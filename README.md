@@ -6,9 +6,9 @@ MediaPipe samples on Kotlin Multiplatform (Android and iOS).
 
 Migration and Feature List:
 
-|    Feature     | Package | Original Android Sample URL| Additional Setup|
-|:--------------:|:---:|:---:|:---:|
-| llm inference  | me.xx2bab.mediapiper.llm |https://github.com/google-ai-edge/mediapipe-samples/tree/main/examples/llm_inference|For Android:|
+|    Feature     | Package |                                 Original Android Sample URL                                  | Additional Setup|
+|:--------------:|:---:|:--------------------------------------------------------------------------------------------:|:---:|
+| llm inference  | me.xx2bab.mediapiper.llm | https://github.com/google-ai-edge/mediapipe-samples/tree/main/examples/llm_inference/android |For Android:|
 
 
 ## On-device Model Setup
