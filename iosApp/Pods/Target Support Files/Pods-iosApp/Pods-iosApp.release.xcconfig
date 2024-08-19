@@ -1,0 +1,17 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
+ENABLE_USER_SCRIPT_SANDBOXING = NO
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../../app/build/cocoapods/framework" "${PODS_ROOT}/MediaPipeTasksGenAI/frameworks" "${PODS_ROOT}/MediaPipeTasksGenAIC/frameworks" "${PODS_XCFRAMEWORKS_BUILD_DIR}/MediaPipeTasksGenAI" "${PODS_XCFRAMEWORKS_BUILD_DIR}/MediaPipeTasksGenAIC"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+LD_RUNPATH_SEARCH_PATHS = $(inherited) /usr/lib/swift '@executable_path/Frameworks' '@loader_path/Frameworks'
+LIBRARY_SEARCH_PATHS = $(inherited) "${TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}" /usr/lib/swift
+OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -framework "Accelerate" -framework "CoreVideo" -framework "MediaPipeTasksGenAI" -framework "MediaPipeTasksGenAIC" -framework "Metal" -framework "OpenGLES" -framework "app"
+OTHER_LDFLAGS[sdk=iphoneos*] = $(inherited) -force_load "$(PODS_ROOT)/MediaPipeTasksGenAIC/frameworks/genai_libraries/libMediaPipeTasksGenAIC_device.a"
+OTHER_LDFLAGS[sdk=iphonesimulator*] = $(inherited) -force_load "${PODS_ROOT}/MediaPipeTasksGenAIC/frameworks/genai_libraries/libMediaPipeTasksGenAIC_simulator.a"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
+PODS_XCFRAMEWORKS_BUILD_DIR = $(PODS_CONFIGURATION_BUILD_DIR)/XCFrameworkIntermediates
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

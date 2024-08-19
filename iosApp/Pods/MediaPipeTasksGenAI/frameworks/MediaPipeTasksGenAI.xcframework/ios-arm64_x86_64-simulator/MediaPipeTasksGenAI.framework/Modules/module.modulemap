@@ -1,0 +1,4 @@
+framework module MediaPipeTasksGenAI {
+  header "MediaPipeTasksGenAI.h"
+  requires objc
+}

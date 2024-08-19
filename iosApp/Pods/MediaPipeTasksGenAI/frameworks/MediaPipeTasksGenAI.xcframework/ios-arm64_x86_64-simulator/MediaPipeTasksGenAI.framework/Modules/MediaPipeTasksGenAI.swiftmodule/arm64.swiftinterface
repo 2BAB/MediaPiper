@@ -1,0 +1,50 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -static -O -module-name MediaPipeTasksGenAI
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+import MediaPipeTasksGenAIC
+import Swift
+import _Concurrency
+import _StringProcessing
+@objc(MPPLLMInference) final public class LlmInference : ObjectiveC.NSObject {
+  @objc public init(options: MediaPipeTasksGenAI.LlmInference.Options) throws
+  @objc convenience public init(modelPath: Swift.String) throws
+  @objc final public func generateResponse(inputText: Swift.String) throws -> Swift.String
+  @objc final public func generateResponseAsync(inputText: Swift.String, progress: @escaping (_ partialResponse: Swift.String?, _ error: Swift.Error?) -> Swift.Void, completion: @escaping (() -> Swift.Void)) throws
+  @available(iOS 13, macOS 10.15, tvOS 13, watchOS 6, *)
+  final public func generateResponseAsync(inputText: Swift.String) -> _Concurrency.AsyncThrowingStream<Swift.String, Swift.Error>
+  final public func sizeInTokens(text: Swift.String) throws -> Swift.Int
+  @objc deinit
+}
+extension MediaPipeTasksGenAI.LlmInference {
+  @objc(MPPLLMInferenceOptions) final public class Options : ObjectiveC.NSObject {
+    @objc final public var modelPath: Swift.String
+    @objc final public var maxTokens: Swift.Int
+    @objc final public var topk: Swift.Int
+    @objc final public var temperature: Swift.Float
+    @objc final public var randomSeed: Swift.Int
+    @objc final public var loraPath: Swift.String?
+    @objc public init(modelPath: Swift.String)
+    @objc deinit
+  }
+}
+public enum GenAiInferenceError : Swift.Error {
+  case invalidResponse
+  case illegalMethodCall
+  case failedToComputeSizeInTokens(Swift.String?)
+  case failedToInitializeSession(Swift.String?)
+}
+extension MediaPipeTasksGenAI.GenAiInferenceError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension MediaPipeTasksGenAI.GenAiInferenceError : Foundation.CustomNSError {
+  public static var errorDomain: Swift.String {
+    get
+  }
+  public var errorCode: Swift.Int {
+    get
+  }
+}
