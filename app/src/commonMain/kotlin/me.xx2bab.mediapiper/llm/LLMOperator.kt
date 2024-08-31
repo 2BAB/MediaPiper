@@ -38,5 +38,4 @@ interface LLMOperator {
      */
     suspend fun generateResponseAsync(inputText: String): Flow<Pair<String, Boolean>>
 
-
 }
