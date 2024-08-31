@@ -20,14 +20,15 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import io.github.aakira.napier.Napier
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.IO
 import kotlinx.coroutines.withContext
 import org.jetbrains.compose.resources.stringResource
 import mediapiper.app.generated.resources.Res
 import mediapiper.app.generated.resources.loading_model
 
 @Composable
-internal fun LoadingRoute(
-    aiViewModel: AIViewModel,
+internal fun LoadingScreen(
+    llmViewModel: LLMViewModel,
     onModelLoaded: () -> Unit = { }
 ) {
     var errorMessage by remember { mutableStateOf("") }
@@ -43,8 +44,8 @@ internal fun LoadingRoute(
 
     LaunchedEffect(Unit) {
         // Create the LlmInference in a separate thread
-        withContext(Dispatchers.Default) {
-            val res = aiViewModel.initLlmModel()
+        withContext(Dispatchers.IO) {
+            val res = llmViewModel.initLlmModel()
             if (res == null) {
                 withContext(Dispatchers.Main) {
                     onModelLoaded()

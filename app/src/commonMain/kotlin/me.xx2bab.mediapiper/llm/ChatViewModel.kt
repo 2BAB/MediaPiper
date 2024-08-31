@@ -1,8 +1,5 @@
 package me.xx2bab.mediapiper.llm
 
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
 import cafe.adriel.voyager.core.model.ScreenModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
@@ -13,11 +10,10 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.collectIndexed
 import kotlinx.coroutines.launch
-import kotlinx.serialization.json.Json
 
 // 9.
 class ChatViewModel(
-    private val aiViewModel: AIViewModel
+    private val llmViewModel: LLMViewModel
 ) : ScreenModel {
     private val coroutineScope = MainScope()
 
@@ -39,7 +35,7 @@ class ChatViewModel(
             setInputEnabled(false)
             try {
                 val fullPrompt = _uiState.value.fullPrompt
-                aiViewModel.generateResponseInflow(fullPrompt)
+                llmViewModel.generateResponseInflow(fullPrompt)
                     .collectIndexed { index, (partialResult, done) ->
                         currentMessageId?.let {
                             if (index == 0) {
