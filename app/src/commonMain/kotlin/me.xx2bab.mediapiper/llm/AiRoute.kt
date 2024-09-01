@@ -3,7 +3,9 @@ package me.xx2bab.mediapiper.llm
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -18,6 +20,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.core.model.rememberScreenModel
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
@@ -35,20 +39,23 @@ class AiRoute : Screen {
 
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
-    fun AiScreen(llmOperator:LLMOperator = koinInject()) {
+    fun AiScreen(llmOperator: LLMOperator = koinInject()) {
         val chatViewModel = rememberScreenModel { ChatViewModel(llmOperator) }
         var showLoading by rememberSaveable { mutableStateOf(true) }
         Column {
             TopAppBar(
                 title = {
-                    Text("AI Samples")
-                },
-                navigationIcon = {
-                    val navigator = LocalNavigator.currentOrThrow
-                    IconButton(onClick = { navigator.pop() }) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, null)
+                    Row {
+                        Text("AI Samples")
+                        Text("($MODEL_NAME)", fontSize = 12.sp, modifier = Modifier.padding(start = 8.dp))
                     }
                 },
+//                navigationIcon = {
+//                    val navigator = LocalNavigator.currentOrThrow
+//                    IconButton(onClick = { navigator.pop() }) {
+//                        Icon(Icons.AutoMirrored.Filled.ArrowBack, null)
+//                    }
+//                },
             )
             Box(
                 modifier = Modifier.fillMaxSize()
