@@ -11,6 +11,7 @@
 		A93A953B29CC810C00F8E227 /* iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A953A29CC810C00F8E227 /* iosApp.swift */; };
 		A93A953F29CC810D00F8E227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93A953E29CC810D00F8E227 /* Assets.xcassets */; };
 		A93A954229CC810D00F8E227 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93A954129CC810D00F8E227 /* Preview Assets.xcassets */; };
+		BC75E7022C844346001ECBCD /* gemma-2b-it-gpu-int8.bin in Resources */ = {isa = PBXBuildFile; fileRef = BC75E7012C844346001ECBCD /* gemma-2b-it-gpu-int8.bin */; };
 		BCB8894A2C23DADA00828FC3 /* MediapipeLLMInferenceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB889492C23DADA00828FC3 /* MediapipeLLMInferenceDelegate.swift */; };
 		BCB8894C2C2962F300828FC3 /* gemma-2b-it-cpu-int8.bin in Resources */ = {isa = PBXBuildFile; fileRef = BCB8894B2C2962F300828FC3 /* gemma-2b-it-cpu-int8.bin */; };
 		BCB889502C2D4DBD00828FC3 /* gemma-2b-it-gpu-int4.bin in Resources */ = {isa = PBXBuildFile; fileRef = BCB8894F2C2D4DBD00828FC3 /* gemma-2b-it-gpu-int4.bin */; };
@@ -23,6 +24,7 @@
 		A93A953A29CC810C00F8E227 /* iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosApp.swift; sourceTree = "<group>"; };
 		A93A953E29CC810D00F8E227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A93A954129CC810D00F8E227 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BC75E7012C844346001ECBCD /* gemma-2b-it-gpu-int8.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = "gemma-2b-it-gpu-int8.bin"; path = "../../llm-models/gemma-2b-it-gpu-int8.bin"; sourceTree = "<group>"; };
 		BCB889492C23DADA00828FC3 /* MediapipeLLMInferenceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediapipeLLMInferenceDelegate.swift; sourceTree = "<group>"; };
 		BCB8894B2C2962F300828FC3 /* gemma-2b-it-cpu-int8.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = "gemma-2b-it-cpu-int8.bin"; path = "../../llm-models/gemma-2b-it-cpu-int8.bin"; sourceTree = "<group>"; };
 		BCB8894F2C2D4DBD00828FC3 /* gemma-2b-it-gpu-int4.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = "gemma-2b-it-gpu-int4.bin"; path = "../../llm-models/gemma-2b-it-gpu-int4.bin"; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				BCB8894F2C2D4DBD00828FC3 /* gemma-2b-it-gpu-int4.bin */,
+				BC75E7012C844346001ECBCD /* gemma-2b-it-gpu-int8.bin */,
 				BCB8894B2C2962F300828FC3 /* gemma-2b-it-cpu-int8.bin */,
 				A93A953929CC810C00F8E227 /* iosApp */,
 				A93A953829CC810C00F8E227 /* Products */,
@@ -162,6 +165,7 @@
 				BCB8894C2C2962F300828FC3 /* gemma-2b-it-cpu-int8.bin in Resources */,
 				BCB889502C2D4DBD00828FC3 /* gemma-2b-it-gpu-int4.bin in Resources */,
 				A93A953F29CC810D00F8E227 /* Assets.xcassets in Resources */,
+				BC75E7022C844346001ECBCD /* gemma-2b-it-gpu-int8.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
