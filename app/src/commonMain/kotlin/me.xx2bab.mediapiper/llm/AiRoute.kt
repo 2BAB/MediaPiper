@@ -23,15 +23,20 @@ import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.koin.compose.koinInject
 
 // 6.
-class AiScreen : Screen {
+class AiRoute : Screen {
+
+    @Composable
+    override fun Content() {
+        AiScreen()
+    }
 
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
-    override fun Content() {
-        val LLMViewModel = rememberScreenModel { LLMViewModel() }
-        val chatViewModel = rememberScreenModel { ChatViewModel(LLMViewModel) }
+    fun AiScreen(llmOperator:LLMOperator = koinInject()) {
+        val chatViewModel = rememberScreenModel { ChatViewModel(llmOperator) }
         var showLoading by rememberSaveable { mutableStateOf(true) }
         Column {
             TopAppBar(
@@ -50,7 +55,7 @@ class AiScreen : Screen {
                     .background(Color.White)
             ) {
                 if (showLoading) {
-                    LoadingScreen(LLMViewModel, onModelLoaded = {
+                    LoadingScreen(llmOperator, onModelLoaded = {
                         showLoading = false
                     })
                 } else {
@@ -59,11 +64,12 @@ class AiScreen : Screen {
             }
         }
     }
-
 }
+
 
 @Preview
 @Composable
 fun SimpleComposablePreview() {
-    AiScreen()
+    AiRoute()
 }
+

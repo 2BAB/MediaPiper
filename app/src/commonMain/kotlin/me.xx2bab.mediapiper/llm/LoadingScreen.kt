@@ -28,7 +28,7 @@ import mediapiper.app.generated.resources.loading_model
 
 @Composable
 internal fun LoadingScreen(
-    llmViewModel: LLMViewModel,
+    llmOperator: LLMOperator,
     onModelLoaded: () -> Unit = { }
 ) {
     var errorMessage by remember { mutableStateOf("") }
@@ -45,7 +45,7 @@ internal fun LoadingScreen(
     LaunchedEffect(Unit) {
         // Create the LlmInference in a separate thread
         withContext(Dispatchers.IO) {
-            val res = llmViewModel.initLlmModel()
+            val res = llmOperator.initModel()
             if (res == null) {
                 withContext(Dispatchers.Main) {
                     onModelLoaded()

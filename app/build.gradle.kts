@@ -15,8 +15,6 @@ plugins {
     alias(libs.plugins.kotlinx.serialization)
 }
 
-//applyKtorWasmWorkaround(libs.versions.ktor.get())
-
 kotlin {
     androidTarget {
         compilations.all {
@@ -118,6 +116,7 @@ kotlin {
             implementation(libs.napier)
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.koin.core)
+            implementation(libs.koin.compose)
             implementation(libs.ktor.client.serialization.kotlinx.json)
         }
 

@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 
 // 9.
 class ChatViewModel(
-    private val llmViewModel: LLMViewModel
+    private val llmOperator: LLMOperator
 ) : ScreenModel {
     private val coroutineScope = MainScope()
 
@@ -35,7 +35,7 @@ class ChatViewModel(
             setInputEnabled(false)
             try {
                 val fullPrompt = _uiState.value.fullPrompt
-                llmViewModel.generateResponseInflow(fullPrompt)
+                llmOperator.generateResponseAsync(fullPrompt)
                     .collectIndexed { index, (partialResult, done) ->
                         currentMessageId?.let {
                             if (index == 0) {
