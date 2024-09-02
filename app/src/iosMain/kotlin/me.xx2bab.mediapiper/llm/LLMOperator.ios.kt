@@ -1,50 +1,79 @@
 package me.xx2bab.mediapiper.llm
 
+import cocoapods.MediaPipeTasksGenAI.MPPLLMInference
+import cocoapods.MediaPipeTasksGenAI.MPPLLMInferenceOptions
+import io.github.aakira.napier.Napier
 import kotlinx.atomicfu.atomic
+import kotlinx.cinterop.ExperimentalForeignApi
+import kotlinx.cinterop.ObjCObjectVar
+import kotlinx.cinterop.memScoped
+import kotlinx.cinterop.alloc
+import kotlinx.cinterop.ptr
 import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.coroutines.flow.flow
+import platform.Foundation.NSBundle
+import platform.Foundation.NSError
 
 actual class LLMOperatorFactory(private val llmInferenceDelegate: LLMOperatorSwift) {
-    actual fun create(): LLMOperator = LLMOperatorIOSImpl(llmInferenceDelegate)
+    actual fun create(): LLMOperator = LLMOperatorIOSImpl()
 }
 
 //// FIXME: MPPLLMInference throws NPE during initialization stage without detailed stacktrace
-//@OptIn(ExperimentalForeignApi::class)
-//class LLMOperatorIOSImpl: LLMOperator {
-//
+@OptIn(ExperimentalForeignApi::class)
+class LLMOperatorIOSImpl : LLMOperator {
+
 //    private val inference: MPPLLMInference
-//
-//    init {
-//        val modelPath = NSBundle.mainBundle.pathForResource("gemma-2b-it-gpu-int4", "bin")
-//
-//        val options = MPPLLMInferenceOptions(modelPath!!)
-//        options.setModelPath(modelPath!!)
-//        options.setMaxTokens(2048)
-//        options.setTopk(40)
-//        options.setTemperature(0.8f)
-//        options.setRandomSeed(102)
-//
-//        inference = MPPLLMInference(options, null) // NPE throws here!!
-//    }
-//
-//    override fun sizeInTokens(text: String): Int {
-//        return 0
-//    }
-//
-//    override fun generateResponse(inputText: String): String {
-//        return inference.generateResponseWithInputText(inputText, null)!!
-//    }
-//
-//    override fun generateResponseAsync(inputText: String, ...) {
-//        // inference.generateResponseAsyncWithInputText(...)
-//    }
-//
-//}
+
+    init {
+        val modelPath = NSBundle.mainBundle.pathForResource("gemma-2b-it-gpu-int4", "bin")
+
+        val options = MPPLLMInferenceOptions(modelPath!!)
+        options.setModelPath(modelPath)
+        options.setMaxTokens(1024)
+        options.setTopk(40)
+        options.setTemperature(0.8f)
+        options.setRandomSeed(102)
+
+        try {
+            initInference(options)
+        } catch (e: Throwable) {
+            Napier.e { e.message ?: "" }
+            e.printStackTrace()
+        }
+    }
+
+    @Throws(Throwable::class)
+    fun initInference(options: MPPLLMInferenceOptions) {
+        memScoped {
+            var error = alloc<ObjCObjectVar<NSError?>>()
+            val inference = MPPLLMInference(options, error.ptr) // NPE throws here!!
+        }
+    }
+
+    override suspend fun initModel(): String? {
+        return ""
+    }
+
+    override fun sizeInTokens(text: String): Int {
+        return 0
+    }
+
+    override suspend fun generateResponse(inputText: String): String {
+        return ""
+    }
+
+    override suspend fun generateResponseAsync(inputText: String): Flow<Pair<String, Boolean>> {
+        return flow { }
+    }
 
 
-class LLMOperatorIOSImpl(private val delegate: LLMOperatorSwift) : LLMOperator {
+}
+
+
+class LLMOperatorIOSImpl2(private val delegate: LLMOperatorSwift) : LLMOperator {
 
     private val initialized = atomic<Boolean>(false)
 
