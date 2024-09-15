@@ -1,4 +1,4 @@
-package me.xx2bab.mediapiper.llm
+package me.xx2bab.mediapiper.objectdetection
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -14,44 +14,35 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.setValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import cafe.adriel.voyager.core.model.rememberScreenModel
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
+import me.xx2bab.mediapiper.llm.ChatRoute
+import me.xx2bab.mediapiper.llm.LoadingScreen
+import me.xx2bab.mediapiper.llm.MODEL_NAME
 import mediapiper.app.generated.resources.Res
 import mediapiper.app.generated.resources.llm_screen_name
+import mediapiper.app.generated.resources.object_detection_name
 import org.jetbrains.compose.resources.stringResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
-import org.koin.compose.koinInject
 
-// 6.
-class AiRoute : Screen {
+class ObjectDetectionRoute : Screen {
 
     @Composable
     override fun Content() {
-        AiScreen()
+        ObjectDetectionWrapperScreen()
     }
 
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
-    fun AiScreen(llmOperator: LLMOperator = koinInject()) {
-        val chatViewModel = rememberScreenModel { ChatViewModel(llmOperator) }
-        var showLoading by rememberSaveable { mutableStateOf(true) }
+    private fun ObjectDetectionWrapperScreen() {
         Column {
             TopAppBar(
                 title = {
-                    Row {
-                        Text(stringResource(Res.string.llm_screen_name))
-                        Text("($MODEL_NAME)", fontSize = 12.sp, modifier = Modifier.padding(start = 8.dp))
-                    }
+                    Text(stringResource(Res.string.object_detection_name))
                 },
                 navigationIcon = {
                     val navigator = LocalNavigator.currentOrThrow
@@ -64,22 +55,9 @@ class AiRoute : Screen {
                 modifier = Modifier.fillMaxSize()
                     .background(Color.White)
             ) {
-                if (showLoading) {
-                    LoadingScreen(llmOperator, onModelLoaded = {
-                        showLoading = false
-                    })
-                } else {
-                    ChatRoute(chatViewModel)
-                }
+
             }
         }
     }
+
 }
-
-
-@Preview
-@Composable
-fun SimpleComposablePreview() {
-    AiRoute()
-}
-
