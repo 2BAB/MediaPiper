@@ -15,6 +15,8 @@ ktor = "3.0.0-beta-2"
 koin = "3.5.6"
 coil = "3.0.0-alpha10"
 kstore = "0.8.0"
+mokoPermiVer = "0.18.0"
+androidx-camera-ver = "1.1.0"
 
 [libraries]
 
@@ -22,7 +24,7 @@ androidx-activityCompose = { module = "androidx.activity:activity-compose", vers
 androidx-testManifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "androidx-uiTest" }
 androidx-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "androidx-uiTest" }
 androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidx-lifecycle" }
-androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref= "androidx-lifecycle" }
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 appdirs = { module = "net.harawata:appdirs", version.ref = "appdirs" }
 voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
 voyager-screenmodel = { module = "cafe.adriel.voyager:voyager-screenmodel", version.ref = "voyager" }
@@ -48,8 +50,16 @@ coil-network-ktor = { module = "io.coil-kt.coil3:coil-network-ktor", version = "
 kstore = { module = "io.github.xxfast:kstore", version.ref = "kstore" }
 kstore-file = { module = "io.github.xxfast:kstore-file", version.ref = "kstore" }
 kstore-storage = { module = "io.github.xxfast:kstore-storage", version.ref = "kstore" }
-
+#moko-permission-core = { module = "dev.icerock.moko:permissions", version.ref = "mokoPermiVer" }
+#moko-permission-compose = { module = "dev.icerock.moko:permissions-compose", version.ref = "mokoPermiVer" }
+androidx-camerax-core = { module = "androidx.camera:camera-core", version.ref = "androidx-camera-ver" }
+androidx-camerax-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "androidx-camera-ver" }
+androidx-camerax-lifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "androidx-camera-ver" }
+androidx-camerax-view = { module = "androidx.camera:camera-view", version.ref = "androidx-camera-ver" }
+accompanist-permission = { module = "com.google.accompanist:accompanist-permissions", version = "0.23.1"}
 mediapipe-genai-android = { module = "com.google.mediapipe:tasks-genai", version = "0.10.14" }
+mediapipe-objectdetection = { module = "com.google.mediapipe:tasks-vision", version = "0.10.0" }
+
 
 [plugins]
 
@@ -61,3 +71,9 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 buildConfig = { id = "com.github.gmazzo.buildconfig", version.ref = "buildConfig" }
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kotlinx-atomicfu = { id = "org.jetbrains.kotlin.plugin.atomicfu", version.ref = "kotlin" }
+
+[bundles]
+camerax = ["androidx-camerax-core",
+    "androidx-camerax-camera2",
+    "androidx-camerax-lifecycle",
+    "androidx-camerax-view"]
