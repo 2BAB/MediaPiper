@@ -1,9 +1,9 @@
+
 import com.android.build.api.dsl.ManagedVirtualDevice
 import org.jetbrains.compose.ExperimentalComposeLibrary
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.plugin.KotlinSourceSetTree
-import org.jetbrains.kotlin.konan.target.KonanTarget
 
 plugins {
     alias(libs.plugins.multiplatform) // 2.
@@ -46,53 +46,58 @@ kotlin {
             baseName = "Mediapiper"
             isStatic = true
         }
-        it.binaries.all {
-            linkerOpts("-L/usr/lib/swift")
-            linkerOpts("-rpath", "/usr/lib/swift")
-            val aicPathSuffix = when (this.target.konanTarget) {
-                KonanTarget.IOS_ARM64 -> "ios-arm64"
-                KonanTarget.IOS_X64, KonanTarget.IOS_SIMULATOR_ARM64 -> "ios-arm64_x86_64-simulator"
-                else -> null
-            }
-            aicPathSuffix?.let { p ->
-                listOf(
-                    "MediaPipeTasksGenAIC",
-                    "MediaPipeTasksGenAI"
-                ).forEach { f ->
-                    linkerOpts("-framework", f, "-F../iosApp/Pods/$f/frameworks/$f.xcframework/$p")
-                }
-                val swiftPathSuffix = when (this.target.konanTarget) {
-                    KonanTarget.IOS_ARM64 -> "iphoneos"
-                    KonanTarget.IOS_X64, KonanTarget.IOS_SIMULATOR_ARM64 -> "iphonesimulator"
-                    else -> null
-                }
-                swiftPathSuffix?.let { sp ->
-                    val swiftPathPrefix =
-                        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"
-                    linkerOpts("-L$swiftPathPrefix/swift/$sp")
-                    linkerOpts("-rpath", "$swiftPathPrefix/swift-5.0/$sp")
-                }
-            }
-        }
+//        it.binaries.all {
+//            linkerOpts("-L/usr/lib/swift")
+//            linkerOpts("-rpath", "/usr/lib/swift")
+//            val aicPathSuffix = when (this.target.konanTarget) {
+//                KonanTarget.IOS_ARM64 -> "ios-arm64"
+//                KonanTarget.IOS_X64, KonanTarget.IOS_SIMULATOR_ARM64 -> "ios-arm64_x86_64-simulator"
+//                else -> null
+//            }
+//            aicPathSuffix?.let { p ->
+//                listOf(
+//                    "MediaPipeTasksGenAIC",
+//                    "MediaPipeTasksGenAI"
+//                ).forEach { f ->
+//                    linkerOpts("-framework", f, "-F../iosApp/Pods/$f/frameworks/$f.xcframework/$p")
+//                }
+//                val swiftPathSuffix = when (this.target.konanTarget) {
+//                    KonanTarget.IOS_ARM64 -> "iphoneos"
+//                    KonanTarget.IOS_X64, KonanTarget.IOS_SIMULATOR_ARM64 -> "iphonesimulator"
+//                    else -> null
+//                }
+//                swiftPathSuffix?.let { sp ->
+//                    val swiftPathPrefix =
+//                        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"
+//                    linkerOpts("-L$swiftPathPrefix/swift/$sp")
+//                    linkerOpts("-rpath", "$swiftPathPrefix/swift-5.0/$sp")
+//                }
+//            }
+//        }
     }
 
     cocoapods {
         name = "Mediapiper"
 
-        version = "1.0.1"
+        version = "1.0.2"
         ios.deploymentTarget = "15"
 
         summary = "Mediapiper"
         homepage = "https://github.com/2BAB/Mediapiper"
 
-        pod("MediaPipeTasksGenAIC") {
-            version = "0.10.14"
-            extraOpts += listOf("-compiler-option", "-fmodules")
-        }
-        pod("MediaPipeTasksGenAI") {
-            version = "0.10.14"
-            extraOpts += listOf("-compiler-option", "-fmodules")
-        }
+//        pod("MediaPipeTasksVision") {
+//            version = "0.10.14"
+//            extraOpts += listOf("-compiler-option", "-fmodules")
+//        }
+
+//        pod("MediaPipeTasksGenAIC") {
+//            version = "0.10.14"
+//            extraOpts += listOf("-compiler-option", "-fmodules")
+//        }
+//        pod("MediaPipeTasksGenAI") {
+//            version = "0.10.14"
+//            extraOpts += listOf("-compiler-option", "-fmodules")
+//        }
 
     }
 
@@ -118,6 +123,8 @@ kotlin {
             implementation(libs.koin.core)
             implementation(libs.koin.compose)
             implementation(libs.ktor.client.serialization.kotlinx.json)
+//            implementation(libs.moko.permission.core)
+//            implementation(libs.moko.permission.compose)
         }
 
         commonTest.dependencies {
@@ -138,12 +145,17 @@ kotlin {
             implementation(libs.kstore)
             implementation(libs.kstore.file)
             implementation(libs.mediapipe.genai.android)
+            implementation(libs.mediapipe.objectdetection)
+            implementation(libs.bundles.camerax)
+            implementation(libs.accompanist.permission)
+
         }
 
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
             implementation(libs.kstore)
             implementation(libs.kstore.file)
+            implementation(libs.kotlinx.coroutines.core)
         }
     }
 }

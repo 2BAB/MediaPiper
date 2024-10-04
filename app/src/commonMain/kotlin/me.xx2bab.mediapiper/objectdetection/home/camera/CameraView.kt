@@ -35,7 +35,20 @@ fun CameraView(
     setInferenceTime: (newInferenceTime: Int) -> Unit,
 ) {
     CameraPermissionControl {
-        CameraPreview(threshold, maxResults, delegate, mlModel, setInferenceTime) { result -> }
+        CameraPreview(
+            threshold,
+            maxResults,
+            delegate,
+            mlModel,
+            setInferenceTime,
+            onDetectionResultUpdate = { detectionResults ->
+//                    detectionResults.detections?.forEach { de ->
+//                        de.categories.forEach { ca ->
+//                            Napier.d { ca.categoryName + ": " + ca.score.toString() }
+//                        }
+//                        Napier.d { de.boundingBox.toString() }
+//                    }
+            })
     }
 }
 

@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>MediaPipeTasksGenAI.xcscheme</key>
+		<key>MediaPipeTasksCommon.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MediaPipeTasksGenAIC.xcscheme</key>
+		<key>MediaPipeTasksVision.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

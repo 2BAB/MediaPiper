@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'Mediapiper'
-    spec.version                  = '1.0.1'
+    spec.version                  = '1.0.2'
     spec.homepage                 = 'https://github.com/2BAB/Mediapiper'
     spec.source                   = { :http=> ''}
     spec.authors                  = ''
@@ -9,8 +9,7 @@ Pod::Spec.new do |spec|
     spec.vendored_frameworks      = 'build/cocoapods/framework/app.framework'
     spec.libraries                = 'c++'
     spec.ios.deployment_target    = '15'
-    spec.dependency 'MediaPipeTasksGenAI', '0.10.14'
-    spec.dependency 'MediaPipeTasksGenAIC', '0.10.14'
+                
                 
     if !Dir.exist?('build/cocoapods/framework/app.framework') || Dir.empty?('build/cocoapods/framework/app.framework')
         raise "

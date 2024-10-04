@@ -11,11 +11,15 @@
 		A93A953B29CC810C00F8E227 /* iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93A953A29CC810C00F8E227 /* iosApp.swift */; };
 		A93A953F29CC810D00F8E227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93A953E29CC810D00F8E227 /* Assets.xcassets */; };
 		A93A954229CC810D00F8E227 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93A954129CC810D00F8E227 /* Preview Assets.xcassets */; };
-		BC75E7022C844346001ECBCD /* gemma-2b-it-gpu-int8.bin in Resources */ = {isa = PBXBuildFile; fileRef = BC75E7012C844346001ECBCD /* gemma-2b-it-gpu-int8.bin */; };
-		BC75E7042C848927001ECBCD /* gemma-2b-it-cpu-int4.bin in Resources */ = {isa = PBXBuildFile; fileRef = BC75E7032C848927001ECBCD /* gemma-2b-it-cpu-int4.bin */; };
 		BCB8894A2C23DADA00828FC3 /* MediapipeLLMInferenceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB889492C23DADA00828FC3 /* MediapipeLLMInferenceDelegate.swift */; };
-		BCB8894C2C2962F300828FC3 /* gemma-2b-it-cpu-int8.bin in Resources */ = {isa = PBXBuildFile; fileRef = BCB8894B2C2962F300828FC3 /* gemma-2b-it-cpu-int8.bin */; };
 		BCB889502C2D4DBD00828FC3 /* gemma-2b-it-gpu-int4.bin in Resources */ = {isa = PBXBuildFile; fileRef = BCB8894F2C2D4DBD00828FC3 /* gemma-2b-it-gpu-int4.bin */; };
+		BCE5D2472CA935480076523F /* CameraFeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D2432CA935480076523F /* CameraFeedService.swift */; };
+		BCE5D2482CA935480076523F /* ObjectDetectorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D2462CA935480076523F /* ObjectDetectorService.swift */; };
+		BCE5D2492CA935480076523F /* DefaultConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D2442CA935480076523F /* DefaultConstants.swift */; };
+		BCE5D24A2CA935480076523F /* IOSCameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D2452CA935480076523F /* IOSCameraPreview.swift */; };
+		BCE5D24B2CA940DB0076523F /* efficientdet_lite2.tflite in Resources */ = {isa = PBXBuildFile; fileRef = BCEF8F002C99A19500A517B1 /* efficientdet_lite2.tflite */; };
+		BCE5D24C2CA940DB0076523F /* efficientdet_lite0.tflite in Resources */ = {isa = PBXBuildFile; fileRef = BCEF8EFF2C99A19400A517B1 /* efficientdet_lite0.tflite */; };
+		BCE5D24E2CA987310076523F /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5D24D2CA987310076523F /* OverlayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,11 +29,16 @@
 		A93A953A29CC810C00F8E227 /* iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosApp.swift; sourceTree = "<group>"; };
 		A93A953E29CC810D00F8E227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A93A954129CC810D00F8E227 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BC75E7012C844346001ECBCD /* gemma-2b-it-gpu-int8.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = "gemma-2b-it-gpu-int8.bin"; path = "../../llm-models/gemma-2b-it-gpu-int8.bin"; sourceTree = "<group>"; };
-		BC75E7032C848927001ECBCD /* gemma-2b-it-cpu-int4.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = "gemma-2b-it-cpu-int4.bin"; path = "../../llm-models/gemma-2b-it-cpu-int4.bin"; sourceTree = "<group>"; };
 		BCB889492C23DADA00828FC3 /* MediapipeLLMInferenceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediapipeLLMInferenceDelegate.swift; sourceTree = "<group>"; };
-		BCB8894B2C2962F300828FC3 /* gemma-2b-it-cpu-int8.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = "gemma-2b-it-cpu-int8.bin"; path = "../../llm-models/gemma-2b-it-cpu-int8.bin"; sourceTree = "<group>"; };
 		BCB8894F2C2D4DBD00828FC3 /* gemma-2b-it-gpu-int4.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = "gemma-2b-it-gpu-int4.bin"; path = "../../llm-models/gemma-2b-it-gpu-int4.bin"; sourceTree = "<group>"; };
+		BCE5D2432CA935480076523F /* CameraFeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeedService.swift; sourceTree = "<group>"; };
+		BCE5D2442CA935480076523F /* DefaultConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultConstants.swift; sourceTree = "<group>"; };
+		BCE5D2452CA935480076523F /* IOSCameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSCameraPreview.swift; sourceTree = "<group>"; };
+		BCE5D2462CA935480076523F /* ObjectDetectorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectorService.swift; sourceTree = "<group>"; };
+		BCE5D24D2CA987310076523F /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		BCEF8EF52C995B8300A517B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCEF8EFF2C99A19400A517B1 /* efficientdet_lite0.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = efficientdet_lite0.tflite; sourceTree = "<group>"; };
+		BCEF8F002C99A19500A517B1 /* efficientdet_lite2.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = efficientdet_lite2.tflite; sourceTree = "<group>"; };
 		D8373F78E46FD1FB8410C464 /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,10 +57,9 @@
 		A93A952E29CC810C00F8E227 = {
 			isa = PBXGroup;
 			children = (
-				BC75E7032C848927001ECBCD /* gemma-2b-it-cpu-int4.bin */,
+				BCEF8F002C99A19500A517B1 /* efficientdet_lite2.tflite */,
+				BCEF8EFF2C99A19400A517B1 /* efficientdet_lite0.tflite */,
 				BCB8894F2C2D4DBD00828FC3 /* gemma-2b-it-gpu-int4.bin */,
-				BC75E7012C844346001ECBCD /* gemma-2b-it-gpu-int8.bin */,
-				BCB8894B2C2962F300828FC3 /* gemma-2b-it-cpu-int8.bin */,
 				A93A953929CC810C00F8E227 /* iosApp */,
 				A93A953829CC810C00F8E227 /* Products */,
 				C4127409AE3703430489E7BC /* Frameworks */,
@@ -70,10 +78,12 @@
 		A93A953929CC810C00F8E227 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				BCE5D2422CA9352B0076523F /* objdetection */,
 				A93A953A29CC810C00F8E227 /* iosApp.swift */,
 				A93A953E29CC810D00F8E227 /* Assets.xcassets */,
 				A93A954029CC810D00F8E227 /* Preview Content */,
 				BCB889492C23DADA00828FC3 /* MediapipeLLMInferenceDelegate.swift */,
+				BCEF8EF52C995B8300A517B1 /* Info.plist */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -84,6 +94,18 @@
 				A93A954129CC810D00F8E227 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BCE5D2422CA9352B0076523F /* objdetection */ = {
+			isa = PBXGroup;
+			children = (
+				BCE5D24D2CA987310076523F /* OverlayView.swift */,
+				BCE5D2432CA935480076523F /* CameraFeedService.swift */,
+				BCE5D2442CA935480076523F /* DefaultConstants.swift */,
+				BCE5D2452CA935480076523F /* IOSCameraPreview.swift */,
+				BCE5D2462CA935480076523F /* ObjectDetectorService.swift */,
+			);
+			path = objdetection;
 			sourceTree = "<group>";
 		};
 		C4127409AE3703430489E7BC /* Frameworks */ = {
@@ -164,12 +186,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCE5D24B2CA940DB0076523F /* efficientdet_lite2.tflite in Resources */,
+				BCE5D24C2CA940DB0076523F /* efficientdet_lite0.tflite in Resources */,
 				A93A954229CC810D00F8E227 /* Preview Assets.xcassets in Resources */,
-				BCB8894C2C2962F300828FC3 /* gemma-2b-it-cpu-int8.bin in Resources */,
-				BC75E7042C848927001ECBCD /* gemma-2b-it-cpu-int4.bin in Resources */,
 				BCB889502C2D4DBD00828FC3 /* gemma-2b-it-gpu-int4.bin in Resources */,
 				A93A953F29CC810D00F8E227 /* Assets.xcassets in Resources */,
-				BC75E7022C844346001ECBCD /* gemma-2b-it-gpu-int8.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +279,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A93A953B29CC810C00F8E227 /* iosApp.swift in Sources */,
+				BCE5D2472CA935480076523F /* CameraFeedService.swift in Sources */,
+				BCE5D24E2CA987310076523F /* OverlayView.swift in Sources */,
+				BCE5D2482CA935480076523F /* ObjectDetectorService.swift in Sources */,
+				BCE5D2492CA935480076523F /* DefaultConstants.swift in Sources */,
+				BCE5D24A2CA935480076523F /* IOSCameraPreview.swift in Sources */,
 				BCB8894A2C23DADA00828FC3 /* MediapipeLLMInferenceDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,10 +414,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 2X25ZVS9U6;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/iosApp/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses camera to detect the objects that appear in the camera feed.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -416,10 +446,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 2X25ZVS9U6;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = "${inherited}";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/iosApp/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Mediapiper;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses camera to detect the objects that appear in the camera feed.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

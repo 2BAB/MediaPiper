@@ -1,6 +1,6 @@
 {
   "name": "Mediapiper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/2BAB/Mediapiper",
   "source": {
     "http": ""
@@ -12,14 +12,6 @@
   "libraries": "c++",
   "platforms": {
     "ios": "15"
-  },
-  "dependencies": {
-    "MediaPipeTasksGenAI": [
-      "0.10.14"
-    ],
-    "MediaPipeTasksGenAIC": [
-      "0.10.14"
-    ]
   },
   "xcconfig": {
     "ENABLE_USER_SCRIPT_SANDBOXING": "NO"

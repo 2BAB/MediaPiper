@@ -1,28 +1,27 @@
 PODS:
-  - Mediapiper (1.0.1):
-    - MediaPipeTasksGenAI (= 0.10.14)
-    - MediaPipeTasksGenAIC (= 0.10.14)
-  - MediaPipeTasksGenAI (0.10.14):
-    - MediaPipeTasksGenAIC (= 0.10.14)
-  - MediaPipeTasksGenAIC (0.10.14)
+  - Mediapiper (1.0.2)
+  - MediaPipeTasksCommon (0.10.16)
+  - MediaPipeTasksVision (0.10.16):
+    - MediaPipeTasksCommon (= 0.10.16)
 
 DEPENDENCIES:
   - Mediapiper (from `../app`)
+  - MediaPipeTasksVision
 
 SPEC REPOS:
   trunk:
-    - MediaPipeTasksGenAI
-    - MediaPipeTasksGenAIC
+    - MediaPipeTasksCommon
+    - MediaPipeTasksVision
 
 EXTERNAL SOURCES:
   Mediapiper:
     :path: "../app"
 
 SPEC CHECKSUMS:
-  Mediapiper: d64d2cb0f33ec905a807ac58291f9695949883c3
-  MediaPipeTasksGenAI: 8cd77fa32ea21f7a6319b025aa28cfc3e20ab73b
-  MediaPipeTasksGenAIC: 270ec81f85e96fac283945702e34112ebbfd5e77
+  Mediapiper: ae758dccc19e8521ab145e0db2c1f5499680c73b
+  MediaPipeTasksCommon: de15cf4f393854505fff28a8566fa2e85297f0e9
+  MediaPipeTasksVision: 658206f3ddf63ccf582bb99599ec9cbde2ca31af
 
-PODFILE CHECKSUM: fb5292835e750a992d246cbe047046c4e4fdc625
+PODFILE CHECKSUM: f71073a872212f598f258353cde24acbde1cc208
 
 COCOAPODS: 1.15.2

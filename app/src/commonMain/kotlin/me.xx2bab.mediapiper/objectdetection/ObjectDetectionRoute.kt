@@ -1,6 +1,8 @@
 package me.xx2bab.mediapiper.objectdetection
 
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -50,30 +52,31 @@ class ObjectDetectionRoute : Screen {
         var showHomeScreen by rememberSaveable {
             mutableStateOf(true)
         }
-
-        Surface(modifier = Modifier.fillMaxSize()) {
-            if (showHomeScreen) {
-                HomeScreen(
-                    onOptionsButtonClick = {
-                        showHomeScreen = false
+        Scaffold { paddingValues ->
+            Surface(modifier = Modifier.fillMaxSize().padding(paddingValues)) {
+                if (showHomeScreen) {
+                    HomeScreen(
+                        onOptionsButtonClick = {
+                            showHomeScreen = false
+                        },
+                        threshold = threshold,
+                        maxResults = maxResults,
+                        delegate = delegate,
+                        mlModel = mlModel
+                    )
+                } else {
+                    OptionsScreen(onBackButtonClick = {
+                        showHomeScreen = true
                     },
-                    threshold = threshold,
-                    maxResults = maxResults,
-                    delegate = delegate,
-                    mlModel = mlModel
-                )
-            } else {
-                OptionsScreen(onBackButtonClick = {
-                    showHomeScreen = true
-                },
-                    threshold = threshold,
-                    setThreshold = { threshold = it },
-                    maxResults = maxResults,
-                    setMaxResults = { maxResults = it },
-                    delegate = delegate,
-                    setDelegate = { delegate = it },
-                    mlModel = mlModel,
-                    setMlModel = { mlModel = it })
+                        threshold = threshold,
+                        setThreshold = { threshold = it },
+                        maxResults = maxResults,
+                        setMaxResults = { maxResults = it },
+                        delegate = delegate,
+                        setDelegate = { delegate = it },
+                        mlModel = mlModel,
+                        setMlModel = { mlModel = it })
+                }
             }
         }
     }

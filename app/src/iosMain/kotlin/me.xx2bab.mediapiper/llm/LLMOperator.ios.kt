@@ -5,10 +5,31 @@ import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.coroutines.flow.flow
 
-actual class LLMOperatorFactory(private val llmInferenceDelegate: LLMOperatorSwift) {
-    actual fun create(): LLMOperator = LLMOperatorIOSImpl(llmInferenceDelegate)
+actual class LLMOperatorFactory() {
+    actual fun create(): LLMOperator = object : LLMOperator {
+        override suspend fun initModel(): String? {
+            return null
+        }
+
+        override fun sizeInTokens(text: String): Int {
+            return 0
+        }
+
+        override suspend fun generateResponse(inputText: String): String {
+            return ""
+        }
+
+        override suspend fun generateResponseAsync(inputText: String): Flow<Pair<String, Boolean>> {
+            return flow {  }
+        }
+    }
 }
+
+//actual class LLMOperatorFactory(private val llmInferenceDelegate: LLMOperatorSwift) {
+//    actual fun create(): LLMOperator = LLMOperatorIOSImpl(llmInferenceDelegate)
+//}
 
 //// FIXME: MPPLLMInference throws NPE during initialization stage without detailed stacktrace
 //@OptIn(ExperimentalForeignApi::class)

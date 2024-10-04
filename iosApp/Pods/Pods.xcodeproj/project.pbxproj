@@ -7,163 +7,119 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		3064836A127DD24329006F859B97E33C /* Mediapiper */ = {
+		1ABB458A7269D2AD0E6964699891EDAE /* MediaPipeTasksCommon */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = E4FDE71E2F41485D724EDAED2FD41D2F /* Build configuration list for PBXAggregateTarget "Mediapiper" */;
+			buildConfigurationList = C7D69FD49084227149A53FD2178697AA /* Build configuration list for PBXAggregateTarget "MediaPipeTasksCommon" */;
 			buildPhases = (
-				0036CF909FA8DA624C1BAB92F6E0A343 /* [CP-User] Build Mediapiper */,
-				5050645B27231F4FED52C4B71E621E6D /* [CP] Copy dSYMs */,
+				3CEE41DFD7B022DE15AA24A8AF9233D7 /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
-				150C721D8F1EC5F6CA7C4DF1B6302DB9 /* PBXTargetDependency */,
-				721B7F0A5A0235657F77C94510374E4B /* PBXTargetDependency */,
+			);
+			name = MediaPipeTasksCommon;
+		};
+		3064836A127DD24329006F859B97E33C /* Mediapiper */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3E07C1C6ED00188A4C8A17FFD5218463 /* Build configuration list for PBXAggregateTarget "Mediapiper" */;
+			buildPhases = (
+				4D3A7F64C6CE07934165C0BFCD040734 /* [CP-User] Build Mediapiper */,
+				1AF7C86EB8467EA6E64DA3D38DC51C98 /* [CP] Copy dSYMs */,
+			);
+			dependencies = (
 			);
 			name = Mediapiper;
 		};
-		6F30F637FCA843002513ED78FA78DEBF /* MediaPipeTasksGenAIC */ = {
+		BEDEAD5BA2B903D907AC242AF62129AB /* MediaPipeTasksVision */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 52FFB75A7DF3D0AF6D5C464E126D3DB6 /* Build configuration list for PBXAggregateTarget "MediaPipeTasksGenAIC" */;
+			buildConfigurationList = 2B5D74A04949DC1F121051E3AF99A39F /* Build configuration list for PBXAggregateTarget "MediaPipeTasksVision" */;
 			buildPhases = (
-				54E73D416E9BC50D64109B3C77CD0C3C /* [CP] Copy XCFrameworks */,
+				00A449ED1CAFDAD1C2D794C996C26CA1 /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
+				51E37F073CC1EF84A91D2C252666F586 /* PBXTargetDependency */,
 			);
-			name = MediaPipeTasksGenAIC;
-		};
-		9491E30DDEE35F68F71C9966DC026B6F /* MediaPipeTasksGenAI */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 9A1F9ECE6588D7EE7986639F7586C7F0 /* Build configuration list for PBXAggregateTarget "MediaPipeTasksGenAI" */;
-			buildPhases = (
-				8C1BC7AFEB1C3D02FA14307E89556DBA /* [CP] Copy XCFrameworks */,
-			);
-			dependencies = (
-				81751BF8F81758CF72885DA0A37F5397 /* PBXTargetDependency */,
-			);
-			name = MediaPipeTasksGenAI;
+			name = MediaPipeTasksVision;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		566D58ECA554EF21195D929FEEBBCA6B /* Pods-iosApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6DB2A5F5DADA1DDE45F36B1A2D6AC16 /* Pods-iosApp-dummy.m */; };
-		585D1DBBB1637010A4DA7AC10933A4A4 /* Pods-iosApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 015E0D7EA7331961AB63E5AFECA86BB5 /* Pods-iosApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		649E22411236C7E797F4E0B69DD938E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		1FDB70507078ADE8C6B8853DC37FE15E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		5F67FC883F574FA3B01277448A56DAB3 /* Pods-iosApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 015E0D7EA7331961AB63E5AFECA86BB5 /* Pods-iosApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8C95C8ECDB8C3B5CF33EB5433F0E76F /* Pods-iosApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6DB2A5F5DADA1DDE45F36B1A2D6AC16 /* Pods-iosApp-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		25A562FBD6EEA9E8090DA305585AA823 /* PBXContainerItemProxy */ = {
+		03255251A89A3B46F075F87B01A1FDC9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6F30F637FCA843002513ED78FA78DEBF;
-			remoteInfo = MediaPipeTasksGenAIC;
+			remoteGlobalIDString = 1ABB458A7269D2AD0E6964699891EDAE;
+			remoteInfo = MediaPipeTasksCommon;
 		};
-		6467F159030D143B310EE8113A78B446 /* PBXContainerItemProxy */ = {
+		04EE10FE5EA7346F9AD596E79AC6CDC0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9491E30DDEE35F68F71C9966DC026B6F;
-			remoteInfo = MediaPipeTasksGenAI;
+			remoteGlobalIDString = BEDEAD5BA2B903D907AC242AF62129AB;
+			remoteInfo = MediaPipeTasksVision;
 		};
-		74C17B588C3563CBFB4E97C4A082FE46 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6F30F637FCA843002513ED78FA78DEBF;
-			remoteInfo = MediaPipeTasksGenAIC;
-		};
-		771C2BE07B2FA6E2BAD18745969D6DEE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6F30F637FCA843002513ED78FA78DEBF;
-			remoteInfo = MediaPipeTasksGenAIC;
-		};
-		8A8D8731E701490939D573AEF77F5261 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9491E30DDEE35F68F71C9966DC026B6F;
-			remoteInfo = MediaPipeTasksGenAI;
-		};
-		A09B13D87BC048AB989FF14C2654DBE7 /* PBXContainerItemProxy */ = {
+		3D755C0895CC6949DBEABC86F928D795 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3064836A127DD24329006F859B97E33C;
 			remoteInfo = Mediapiper;
 		};
+		9B32525AC2F3608212B925C4A177048B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1ABB458A7269D2AD0E6964699891EDAE;
+			remoteInfo = MediaPipeTasksCommon;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		015E0D7EA7331961AB63E5AFECA86BB5 /* Pods-iosApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iosApp-umbrella.h"; sourceTree = "<group>"; };
-		069BD7EF4461100BFA5972BF3882EE78 /* MediaPipeTasksGenAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MediaPipeTasksGenAI.debug.xcconfig; sourceTree = "<group>"; };
-		0B3D7B2F45FCB97A1F2551572635106E /* MediaPipeTasksGenAIC.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = MediaPipeTasksGenAIC.xcframework; path = frameworks/MediaPipeTasksGenAIC.xcframework; sourceTree = "<group>"; };
 		11C9B998CE0869936AE6BE69270DAAC9 /* Pods-iosApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iosApp.modulemap"; sourceTree = "<group>"; };
+		13D8AD731ED26B5E4F09075E07E8B108 /* MediaPipeTasksVision.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = MediaPipeTasksVision.xcframework; path = frameworks/MediaPipeTasksVision.xcframework; sourceTree = "<group>"; };
+		16E363A0DBC842617A38CDABA1DBF3B7 /* MediaPipeTasksCommon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MediaPipeTasksCommon.release.xcconfig; sourceTree = "<group>"; };
+		22B730A8B5E53D05DD052FF663F0592B /* MediaPipeTasksVision-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "MediaPipeTasksVision-xcframeworks.sh"; sourceTree = "<group>"; };
 		244FC2DAA936A0B07ACEFDC74E2D54B8 /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
-		27EAFAE4D83F697296D338987F8C2144 /* MediaPipeTasksGenAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MediaPipeTasksGenAI.release.xcconfig; sourceTree = "<group>"; };
 		2A26864ECFC51AE5ED9205C1EC7429D2 /* compose-resources */ = {isa = PBXFileReference; includeInIndex = 1; name = "compose-resources"; path = "build/compose/cocoapods/compose-resources"; sourceTree = "<group>"; };
-		317800DF14CB72AE31435620064DAEB0 /* MediaPipeTasksGenAIC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MediaPipeTasksGenAIC.debug.xcconfig; sourceTree = "<group>"; };
 		46790731BEA4039B46452102BCD6BEDC /* Mediapiper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Mediapiper.release.xcconfig; sourceTree = "<group>"; };
 		48B41F4438355368AC8843470622F379 /* app.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = app.framework; path = build/cocoapods/framework/app.framework; sourceTree = "<group>"; };
+		55826D6B7C0D6255003FDD73F275A8AA /* MediaPipeTasksVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MediaPipeTasksVision.debug.xcconfig; sourceTree = "<group>"; };
 		55ABB06C8A1800962A74E007E7733796 /* Pods-iosApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iosApp-frameworks.sh"; sourceTree = "<group>"; };
 		6F3B5FED07117E377CFAC3D49B490F17 /* Pods-iosApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iosApp-resources.sh"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		75F85B38CAB9F00FE0F2993BE8BC3A8D /* MediaPipeTasksGenAIC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MediaPipeTasksGenAIC.release.xcconfig; sourceTree = "<group>"; };
+		76305144D23030FF9D1312244B417012 /* MediaPipeTasksCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MediaPipeTasksCommon.debug.xcconfig; sourceTree = "<group>"; };
 		76A263267985B0185D85E24D40FCEE9A /* Pods-iosApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iosApp-Info.plist"; sourceTree = "<group>"; };
 		76D28488EA8CF5C697DFF07967A9960E /* Pods-iosApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iosApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		876203C89509C5A0DE2B0A0263D34208 /* Mediapiper.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Mediapiper.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8FEA4493E63F2584A3A11FF18B3019D8 /* MediaPipeTasksCommon-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "MediaPipeTasksCommon-xcframeworks.sh"; sourceTree = "<group>"; };
 		96294B38CB57645120910A77BB011381 /* Mediapiper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Mediapiper.debug.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A07B56179CB15A08C21382C40A08853D /* MediaPipeTasksCommon.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = MediaPipeTasksCommon.xcframework; path = frameworks/MediaPipeTasksCommon.xcframework; sourceTree = "<group>"; };
 		AF1A4105DEBE31274C5B895249B728CF /* Mediapiper-copy-dsyms.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Mediapiper-copy-dsyms.sh"; sourceTree = "<group>"; };
 		B097DD7534E741D5C41838011D755842 /* Pods-iosApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-iosApp"; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6F748A5E6D31ECB3FC82D328B8FE2F0 /* MediaPipeTasksGenAI-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "MediaPipeTasksGenAI-xcframeworks.sh"; sourceTree = "<group>"; };
-		E419C2AF58B6452E040BCBE74CE474EB /* MediaPipeTasksGenAIC-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "MediaPipeTasksGenAIC-xcframeworks.sh"; sourceTree = "<group>"; };
 		E462E23B3674BF94EAB1504D506F2803 /* Pods-iosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iosApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E4C923318724794E3CC670804C2D6A6B /* Pods-iosApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iosApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E6DB2A5F5DADA1DDE45F36B1A2D6AC16 /* Pods-iosApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iosApp-dummy.m"; sourceTree = "<group>"; };
-		E8DA90B66F89F6CB6826A131239D2B8E /* MediaPipeTasksGenAI.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = MediaPipeTasksGenAI.xcframework; path = frameworks/MediaPipeTasksGenAI.xcframework; sourceTree = "<group>"; };
+		ED84203296EA7FC41963F7C6505D4712 /* MediaPipeTasksVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MediaPipeTasksVision.release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		92490B6101422C9BAE7BE5D548076322 /* Frameworks */ = {
+		0595136E7330B7BECBDF30775884CC2E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				649E22411236C7E797F4E0B69DD938E1 /* Foundation.framework in Frameworks */,
+				1FDB70507078ADE8C6B8853DC37FE15E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08545D265B7C38FB70BE9E852B8C4649 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0B3D7B2F45FCB97A1F2551572635106E /* MediaPipeTasksGenAIC.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0A750896C981CD48882F047F6EA8D97E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F14E69E443884AC09654978C1496A9BF /* MediaPipeTasksGenAI */,
-				EC6187C73423E484F23BA3B698090BDD /* MediaPipeTasksGenAIC */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		0FBF52D3F1327B5800BF60109D9EED69 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C6F748A5E6D31ECB3FC82D328B8FE2F0 /* MediaPipeTasksGenAI-xcframeworks.sh */,
-				069BD7EF4461100BFA5972BF3882EE78 /* MediaPipeTasksGenAI.debug.xcconfig */,
-				27EAFAE4D83F697296D338987F8C2144 /* MediaPipeTasksGenAI.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/MediaPipeTasksGenAI";
-			sourceTree = "<group>";
-		};
 		1F86AA6785DF34AFD5A71790761717DE /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,12 +128,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		424805F80F1BD2F53ADBDC00433D563B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A07B56179CB15A08C21382C40A08853D /* MediaPipeTasksCommon.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		44F027387DE187A628D2962FD9BCF338 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				48B41F4438355368AC8843470622F379 /* app.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52A5C95B555BF3CE4BAECB93961B4C68 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97E223EFAD89847830996F5BFE12C4F9 /* MediaPipeTasksCommon */,
+				FE2052104DCC7B302F3A37D03411DF73 /* MediaPipeTasksVision */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -196,12 +169,14 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		9A72BEBF637291F396B702D26D1BCFE3 /* Frameworks */ = {
+		97E223EFAD89847830996F5BFE12C4F9 /* MediaPipeTasksCommon */ = {
 			isa = PBXGroup;
 			children = (
-				E8DA90B66F89F6CB6826A131239D2B8E /* MediaPipeTasksGenAI.xcframework */,
+				424805F80F1BD2F53ADBDC00433D563B /* Frameworks */,
+				E814A4465071D85D500709A82E81B81F /* Support Files */,
 			);
-			name = Frameworks;
+			name = MediaPipeTasksCommon;
+			path = MediaPipeTasksCommon;
 			sourceTree = "<group>";
 		};
 		9DADC66807EAD796053EC3F117D7DFBD /* Pod */ = {
@@ -253,13 +228,24 @@
 			path = "Target Support Files/Pods-iosApp";
 			sourceTree = "<group>";
 		};
+		C4245415B570FC82185046D6CA346BB0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				22B730A8B5E53D05DD052FF663F0592B /* MediaPipeTasksVision-xcframeworks.sh */,
+				55826D6B7C0D6255003FDD73F275A8AA /* MediaPipeTasksVision.debug.xcconfig */,
+				ED84203296EA7FC41963F7C6505D4712 /* MediaPipeTasksVision.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MediaPipeTasksVision";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				7A6FD324B50EAF3799246C6DC9075CFA /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				0A750896C981CD48882F047F6EA8D97E /* Pods */,
+				52A5C95B555BF3CE4BAECB93961B4C68 /* Pods */,
 				1F86AA6785DF34AFD5A71790761717DE /* Products */,
 				D456857FB6E5BC3266BEC21401D60DB5 /* Targets Support Files */,
 			);
@@ -281,45 +267,43 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		EAAED30CCCBB3A20B4E6F4085A2E6AF5 /* Support Files */ = {
+		E814A4465071D85D500709A82E81B81F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E419C2AF58B6452E040BCBE74CE474EB /* MediaPipeTasksGenAIC-xcframeworks.sh */,
-				317800DF14CB72AE31435620064DAEB0 /* MediaPipeTasksGenAIC.debug.xcconfig */,
-				75F85B38CAB9F00FE0F2993BE8BC3A8D /* MediaPipeTasksGenAIC.release.xcconfig */,
+				8FEA4493E63F2584A3A11FF18B3019D8 /* MediaPipeTasksCommon-xcframeworks.sh */,
+				76305144D23030FF9D1312244B417012 /* MediaPipeTasksCommon.debug.xcconfig */,
+				16E363A0DBC842617A38CDABA1DBF3B7 /* MediaPipeTasksCommon.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/MediaPipeTasksGenAIC";
+			path = "../Target Support Files/MediaPipeTasksCommon";
 			sourceTree = "<group>";
 		};
-		EC6187C73423E484F23BA3B698090BDD /* MediaPipeTasksGenAIC */ = {
+		FD2B7D76E6BD98717717FB4A6FF27CC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				08545D265B7C38FB70BE9E852B8C4649 /* Frameworks */,
-				EAAED30CCCBB3A20B4E6F4085A2E6AF5 /* Support Files */,
+				13D8AD731ED26B5E4F09075E07E8B108 /* MediaPipeTasksVision.xcframework */,
 			);
-			name = MediaPipeTasksGenAIC;
-			path = MediaPipeTasksGenAIC;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F14E69E443884AC09654978C1496A9BF /* MediaPipeTasksGenAI */ = {
+		FE2052104DCC7B302F3A37D03411DF73 /* MediaPipeTasksVision */ = {
 			isa = PBXGroup;
 			children = (
-				9A72BEBF637291F396B702D26D1BCFE3 /* Frameworks */,
-				0FBF52D3F1327B5800BF60109D9EED69 /* Support Files */,
+				FD2B7D76E6BD98717717FB4A6FF27CC6 /* Frameworks */,
+				C4245415B570FC82185046D6CA346BB0 /* Support Files */,
 			);
-			name = MediaPipeTasksGenAI;
-			path = MediaPipeTasksGenAI;
+			name = MediaPipeTasksVision;
+			path = MediaPipeTasksVision;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		BFC9C14C4CE9A044D8472BB992FED507 /* Headers */ = {
+		8EE6FE45675E4DE1DEA95184811A65E1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				585D1DBBB1637010A4DA7AC10933A4A4 /* Pods-iosApp-umbrella.h in Headers */,
+				5F67FC883F574FA3B01277448A56DAB3 /* Pods-iosApp-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,19 +312,19 @@
 /* Begin PBXNativeTarget section */
 		ED39C638569286489CD697A6C8964146 /* Pods-iosApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EAB32E767B7FB1871837C6DC740A2B1E /* Build configuration list for PBXNativeTarget "Pods-iosApp" */;
+			buildConfigurationList = 3D2DD75D8A06CD3F511A24F39C1DEEA2 /* Build configuration list for PBXNativeTarget "Pods-iosApp" */;
 			buildPhases = (
-				BFC9C14C4CE9A044D8472BB992FED507 /* Headers */,
-				EAB5C4F9AD18D68FEDD7239A97865F3A /* Sources */,
-				92490B6101422C9BAE7BE5D548076322 /* Frameworks */,
-				25C562ECEDF71E8FC71CB487ADB47A12 /* Resources */,
+				8EE6FE45675E4DE1DEA95184811A65E1 /* Headers */,
+				3CA5B177CA2BB054E9B8A5F69A97656B /* Sources */,
+				0595136E7330B7BECBDF30775884CC2E /* Frameworks */,
+				A7A2C69267CCB8F162540E67A59460F7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8FC210F21DD130BE5C15EFFF33D5F859 /* PBXTargetDependency */,
-				42F25E91CC2EC2A95DA0F9869FD64B27 /* PBXTargetDependency */,
-				0D8DA9559BE79CD008565F8FC581743C /* PBXTargetDependency */,
+				D0558B94C4CFC51EE4F272D3E68DE2AA /* PBXTargetDependency */,
+				9E6E4FFBC58C649FDC74782B2D72FE76 /* PBXTargetDependency */,
+				994BCCB5826A56DCEEB4DF1BD220AE76 /* PBXTargetDependency */,
 			);
 			name = "Pods-iosApp";
 			productName = Pods_iosApp;
@@ -370,15 +354,15 @@
 			projectRoot = "";
 			targets = (
 				3064836A127DD24329006F859B97E33C /* Mediapiper */,
-				9491E30DDEE35F68F71C9966DC026B6F /* MediaPipeTasksGenAI */,
-				6F30F637FCA843002513ED78FA78DEBF /* MediaPipeTasksGenAIC */,
+				1ABB458A7269D2AD0E6964699891EDAE /* MediaPipeTasksCommon */,
+				BEDEAD5BA2B903D907AC242AF62129AB /* MediaPipeTasksVision */,
 				ED39C638569286489CD697A6C8964146 /* Pods-iosApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		25C562ECEDF71E8FC71CB487ADB47A12 /* Resources */ = {
+		A7A2C69267CCB8F162540E67A59460F7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -388,17 +372,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0036CF909FA8DA624C1BAB92F6E0A343 /* [CP-User] Build Mediapiper */ = {
+		00A449ED1CAFDAD1C2D794C996C26CA1 /* [CP] Copy XCFrameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			name = "[CP-User] Build Mediapiper";
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/MediaPipeTasksVision/MediaPipeTasksVision-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/MediaPipeTasksVision/MediaPipeTasksVision-xcframeworks-output-files.xcfilelist",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "                if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n                  echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \"YES\"\"\n                  exit 0\n                fi\n                set -ev\n                REPO_ROOT=\"$PODS_TARGET_SRCROOT\"\n                \"$REPO_ROOT/../gradlew\" -p \"$REPO_ROOT\" $KOTLIN_PROJECT_PATH:syncFramework                     -Pkotlin.native.cocoapods.platform=$PLATFORM_NAME                     -Pkotlin.native.cocoapods.archs=\"$ARCHS\"                     -Pkotlin.native.cocoapods.configuration=\"$CONFIGURATION\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/MediaPipeTasksVision/MediaPipeTasksVision-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
-		5050645B27231F4FED52C4B71E621E6D /* [CP] Copy dSYMs */ = {
+		1AF7C86EB8467EA6E64DA3D38DC51C98 /* [CP] Copy dSYMs */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -415,128 +406,107 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Mediapiper/Mediapiper-copy-dsyms.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		54E73D416E9BC50D64109B3C77CD0C3C /* [CP] Copy XCFrameworks */ = {
+		3CEE41DFD7B022DE15AA24A8AF9233D7 /* [CP] Copy XCFrameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/MediaPipeTasksGenAIC/MediaPipeTasksGenAIC-xcframeworks-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/MediaPipeTasksCommon/MediaPipeTasksCommon-xcframeworks-input-files.xcfilelist",
 			);
 			name = "[CP] Copy XCFrameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/MediaPipeTasksGenAIC/MediaPipeTasksGenAIC-xcframeworks-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/MediaPipeTasksCommon/MediaPipeTasksCommon-xcframeworks-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/MediaPipeTasksGenAIC/MediaPipeTasksGenAIC-xcframeworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/MediaPipeTasksCommon/MediaPipeTasksCommon-xcframeworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8C1BC7AFEB1C3D02FA14307E89556DBA /* [CP] Copy XCFrameworks */ = {
+		4D3A7F64C6CE07934165C0BFCD040734 /* [CP-User] Build Mediapiper */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/MediaPipeTasksGenAI/MediaPipeTasksGenAI-xcframeworks-input-files.xcfilelist",
-			);
-			name = "[CP] Copy XCFrameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/MediaPipeTasksGenAI/MediaPipeTasksGenAI-xcframeworks-output-files.xcfilelist",
-			);
+			name = "[CP-User] Build Mediapiper";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/MediaPipeTasksGenAI/MediaPipeTasksGenAI-xcframeworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "                if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n                  echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \"YES\"\"\n                  exit 0\n                fi\n                set -ev\n                REPO_ROOT=\"$PODS_TARGET_SRCROOT\"\n                \"$REPO_ROOT/../gradlew\" -p \"$REPO_ROOT\" $KOTLIN_PROJECT_PATH:syncFramework                     -Pkotlin.native.cocoapods.platform=$PLATFORM_NAME                     -Pkotlin.native.cocoapods.archs=\"$ARCHS\"                     -Pkotlin.native.cocoapods.configuration=\"$CONFIGURATION\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EAB5C4F9AD18D68FEDD7239A97865F3A /* Sources */ = {
+		3CA5B177CA2BB054E9B8A5F69A97656B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				566D58ECA554EF21195D929FEEBBCA6B /* Pods-iosApp-dummy.m in Sources */,
+				D8C95C8ECDB8C3B5CF33EB5433F0E76F /* Pods-iosApp-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0D8DA9559BE79CD008565F8FC581743C /* PBXTargetDependency */ = {
+		51E37F073CC1EF84A91D2C252666F586 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MediaPipeTasksCommon;
+			target = 1ABB458A7269D2AD0E6964699891EDAE /* MediaPipeTasksCommon */;
+			targetProxy = 03255251A89A3B46F075F87B01A1FDC9 /* PBXContainerItemProxy */;
+		};
+		994BCCB5826A56DCEEB4DF1BD220AE76 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Mediapiper;
 			target = 3064836A127DD24329006F859B97E33C /* Mediapiper */;
-			targetProxy = A09B13D87BC048AB989FF14C2654DBE7 /* PBXContainerItemProxy */;
+			targetProxy = 3D755C0895CC6949DBEABC86F928D795 /* PBXContainerItemProxy */;
 		};
-		150C721D8F1EC5F6CA7C4DF1B6302DB9 /* PBXTargetDependency */ = {
+		9E6E4FFBC58C649FDC74782B2D72FE76 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = MediaPipeTasksGenAI;
-			target = 9491E30DDEE35F68F71C9966DC026B6F /* MediaPipeTasksGenAI */;
-			targetProxy = 6467F159030D143B310EE8113A78B446 /* PBXContainerItemProxy */;
+			name = MediaPipeTasksVision;
+			target = BEDEAD5BA2B903D907AC242AF62129AB /* MediaPipeTasksVision */;
+			targetProxy = 04EE10FE5EA7346F9AD596E79AC6CDC0 /* PBXContainerItemProxy */;
 		};
-		42F25E91CC2EC2A95DA0F9869FD64B27 /* PBXTargetDependency */ = {
+		D0558B94C4CFC51EE4F272D3E68DE2AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = MediaPipeTasksGenAIC;
-			target = 6F30F637FCA843002513ED78FA78DEBF /* MediaPipeTasksGenAIC */;
-			targetProxy = 25A562FBD6EEA9E8090DA305585AA823 /* PBXContainerItemProxy */;
-		};
-		721B7F0A5A0235657F77C94510374E4B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MediaPipeTasksGenAIC;
-			target = 6F30F637FCA843002513ED78FA78DEBF /* MediaPipeTasksGenAIC */;
-			targetProxy = 771C2BE07B2FA6E2BAD18745969D6DEE /* PBXContainerItemProxy */;
-		};
-		81751BF8F81758CF72885DA0A37F5397 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MediaPipeTasksGenAIC;
-			target = 6F30F637FCA843002513ED78FA78DEBF /* MediaPipeTasksGenAIC */;
-			targetProxy = 74C17B588C3563CBFB4E97C4A082FE46 /* PBXContainerItemProxy */;
-		};
-		8FC210F21DD130BE5C15EFFF33D5F859 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MediaPipeTasksGenAI;
-			target = 9491E30DDEE35F68F71C9966DC026B6F /* MediaPipeTasksGenAI */;
-			targetProxy = 8A8D8731E701490939D573AEF77F5261 /* PBXContainerItemProxy */;
+			name = MediaPipeTasksCommon;
+			target = 1ABB458A7269D2AD0E6964699891EDAE /* MediaPipeTasksCommon */;
+			targetProxy = 9B32525AC2F3608212B925C4A177048B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		28AA041FE28755786E04B2C9E3C0A9CB /* Release */ = {
+		09072C25A24916B41C7C314BFE4D1CA3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 244FC2DAA936A0B07ACEFDC74E2D54B8 /* Pods-iosApp.release.xcconfig */;
+			baseConfigurationReference = 46790731BEA4039B46452102BCD6BEDC /* Mediapiper.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-iosApp/Pods-iosApp-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-iosApp/Pods-iosApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		34C3F97DF24DC6F3B4FB13416668BE9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED84203296EA7FC41963F7C6505D4712 /* MediaPipeTasksVision.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -606,24 +576,6 @@
 			};
 			name = Debug;
 		};
-		5093593601B298D4DCFE882AFC211FE7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46790731BEA4039B46452102BCD6BEDC /* Mediapiper.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 15;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		5D47E2EFAC6FAC81A782D9BFD8736F53 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -686,45 +638,9 @@
 			};
 			name = Release;
 		};
-		63E7084037D33446C6414C80DF699563 /* Release */ = {
+		61D7BBCEC5C5B71726C9B2B91F1D0761 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27EAFAE4D83F697296D338987F8C2144 /* MediaPipeTasksGenAI.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C5393A0A63F9013A2036BB0AADE15667 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75F85B38CAB9F00FE0F2993BE8BC3A8D /* MediaPipeTasksGenAIC.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		CE4C5EFDB40851D17FA65CA65B04A949 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 317800DF14CB72AE31435620064DAEB0 /* MediaPipeTasksGenAIC.debug.xcconfig */;
+			baseConfigurationReference = 76305144D23030FF9D1312244B417012 /* MediaPipeTasksCommon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -739,7 +655,25 @@
 			};
 			name = Debug;
 		};
-		D4ED9AC58B831D97F3BE12B0B2CA5E28 /* Debug */ = {
+		85DCF84C6F7DA80A9D4E895380D5D8C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16E363A0DBC842617A38CDABA1DBF3B7 /* MediaPipeTasksCommon.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6ED4FCC5B90C27071CAB32682BCF4C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 96294B38CB57645120910A77BB011381 /* Mediapiper.debug.xcconfig */;
 			buildSettings = {
@@ -756,7 +690,45 @@
 			};
 			name = Debug;
 		};
-		DB7B5B70544AD52878ADB4564DE615C9 /* Debug */ = {
+		A7B36C7B5C42E7E7F64954AC7907BC1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 244FC2DAA936A0B07ACEFDC74E2D54B8 /* Pods-iosApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iosApp/Pods-iosApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iosApp/Pods-iosApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CAD64D532E5EB6B9F3460729506EE0A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E462E23B3674BF94EAB1504D506F2803 /* Pods-iosApp.debug.xcconfig */;
 			buildSettings = {
@@ -793,9 +765,9 @@
 			};
 			name = Debug;
 		};
-		F0851CBABC094CA85B41572681E3C749 /* Debug */ = {
+		DD3CE532703590C202AAB2166245EAF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 069BD7EF4461100BFA5972BF3882EE78 /* MediaPipeTasksGenAI.debug.xcconfig */;
+			baseConfigurationReference = 55826D6B7C0D6255003FDD73F275A8AA /* MediaPipeTasksVision.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -813,6 +785,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2B5D74A04949DC1F121051E3AF99A39F /* Build configuration list for PBXAggregateTarget "MediaPipeTasksVision" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD3CE532703590C202AAB2166245EAF6 /* Debug */,
+				34C3F97DF24DC6F3B4FB13416668BE9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D2DD75D8A06CD3F511A24F39C1DEEA2 /* Build configuration list for PBXNativeTarget "Pods-iosApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAD64D532E5EB6B9F3460729506EE0A4 /* Debug */,
+				A7B36C7B5C42E7E7F64954AC7907BC1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E07C1C6ED00188A4C8A17FFD5218463 /* Build configuration list for PBXAggregateTarget "Mediapiper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6ED4FCC5B90C27071CAB32682BCF4C1 /* Debug */,
+				09072C25A24916B41C7C314BFE4D1CA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -822,38 +821,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52FFB75A7DF3D0AF6D5C464E126D3DB6 /* Build configuration list for PBXAggregateTarget "MediaPipeTasksGenAIC" */ = {
+		C7D69FD49084227149A53FD2178697AA /* Build configuration list for PBXAggregateTarget "MediaPipeTasksCommon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE4C5EFDB40851D17FA65CA65B04A949 /* Debug */,
-				C5393A0A63F9013A2036BB0AADE15667 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9A1F9ECE6588D7EE7986639F7586C7F0 /* Build configuration list for PBXAggregateTarget "MediaPipeTasksGenAI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F0851CBABC094CA85B41572681E3C749 /* Debug */,
-				63E7084037D33446C6414C80DF699563 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E4FDE71E2F41485D724EDAED2FD41D2F /* Build configuration list for PBXAggregateTarget "Mediapiper" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D4ED9AC58B831D97F3BE12B0B2CA5E28 /* Debug */,
-				5093593601B298D4DCFE882AFC211FE7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EAB32E767B7FB1871837C6DC740A2B1E /* Build configuration list for PBXNativeTarget "Pods-iosApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DB7B5B70544AD52878ADB4564DE615C9 /* Debug */,
-				28AA041FE28755786E04B2C9E3C0A9CB /* Release */,
+				61D7BBCEC5C5B71726C9B2B91F1D0761 /* Debug */,
+				85DCF84C6F7DA80A9D4E895380D5D8C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
