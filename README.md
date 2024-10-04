@@ -2,21 +2,21 @@
 
 MediaPipe samples on Kotlin Multiplatform (Android and iOS).
 
-![](./media/llm-gemma-2b.jpg)
+![](./media/llm-inference-intro.png)
+![](./media/object-detection-intro.png)
 
 Migration and Feature List:
 
-|    Feature     | Package |                                 Original Android Sample URL                                  | Additional Setup|
-|:--------------:|:---:|:--------------------------------------------------------------------------------------------:|:---:|
-| llm inference  | me.xx2bab.mediapiper.llm | https://github.com/google-ai-edge/mediapipe-samples/tree/main/examples/llm_inference/android |For Android:|
+|    Feature     | Package |                                                                                                                                                                           Additional Setup or information                                                                                                                                                                            |                                                                                                                                                                                  Original Android Sample URL                                                                                                                                                                                   |
+|:--------------:|:---:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------:|
+| llm inference  | me.xx2bab.mediapiper.llm |                                                                                                                                                                    Refer to below section to set up Gemma models.                                                                                                                                                                    | https://github.com/google-ai-edge/mediapipe-samples/tree/main/examples/llm_inference/android |
+|object detection | me.xx2bab.mediapiper.objectdetection | Please visit the [/object-detection](https://github.com/2BAB/MediaPiper/tree/object-detection) branch to get the Object Detection KMP demo, models are embedded in both projects already. (We could not merge it to main at this moment due to its framework conflict with LLM, [more information](https://github.com/google-ai-edge/mediapipe/issues/5302#issuecomment-2071660494)) | https://github.com/google-ai-edge/mediapipe-samples/tree/main/examples/object_detection/android-jetpack-compose | 
 
+## LLM Model Setup
 
-## On-device Model Setup
-
-1. Install JDK 17, Android Studio (with Android SDK), XCode (with iOS SDK) and Cocoapods.
-2. Download 2 models, [gemma-1.1-2b-it-gpu-int4](https://www.kaggle.com/models/google/gemma/tfLite/gemma-1.1-2b-it-gpu-int4) and [gemma-1.1-2b-it-cpu-int4](https://www.kaggle.com/models/google/gemma/tfLite/gemma-1.1-2b-it-cpu-int4), from Kaggle respectively.
-3. Execute below command to push models to Android device respectively (must be physical device) ```adb push /the/path/to/gemma-2b-it-gpu-int8.bin data/local/tmp/llm/```
-4. Move models to iOS project respectively by dragging the model to the "iosApp" target and select "create folder reference".
+1. Download 2 models, [gemma-1.1-2b-it-gpu-int4](https://www.kaggle.com/models/google/gemma/tfLite/gemma-1.1-2b-it-gpu-int4) and [gemma-1.1-2b-it-cpu-int4](https://www.kaggle.com/models/google/gemma/tfLite/gemma-1.1-2b-it-cpu-int4), from Kaggle respectively.
+2. Execute below command to push models to Android device respectively (must be physical device) ```adb push /the/path/to/gemma-2b-it-gpu-int8.bin data/local/tmp/llm/```
+3. Move models to iOS project respectively by dragging the model to the "iosApp" target and select "create folder reference".
 
 ## Running on Android
 
