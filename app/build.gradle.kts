@@ -79,18 +79,18 @@ kotlin {
     cocoapods {
         name = "Mediapiper"
 
-        version = "1.0.1"
+        version = "1.0.2"
         ios.deploymentTarget = "15"
 
         summary = "Mediapiper"
         homepage = "https://github.com/2BAB/Mediapiper"
 
         pod("MediaPipeTasksGenAIC") {
-            version = "0.10.14"
+            version = "0.10.18"
             extraOpts += listOf("-compiler-option", "-fmodules")
         }
         pod("MediaPipeTasksGenAI") {
-            version = "0.10.14"
+            version = "0.10.18"
             extraOpts += listOf("-compiler-option", "-fmodules")
         }
 
@@ -111,13 +111,10 @@ kotlin {
             implementation(libs.voyager.navigator)
             implementation(libs.voyager.screenmodel)
             implementation(libs.voyager.transitions)
-            implementation(libs.coil)
-            implementation(libs.coil.network.ktor)
             implementation(libs.napier)
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.koin.core)
             implementation(libs.koin.compose)
-            implementation(libs.ktor.client.serialization.kotlinx.json)
         }
 
         commonTest.dependencies {
@@ -133,7 +130,6 @@ kotlin {
             implementation(libs.androidx.lifecycle.runtime.ktx)
             implementation(libs.androidx.lifecycle.runtime.compose)
             implementation(libs.kotlinx.coroutines.android)
-            implementation(libs.ktor.client.okhttp)
             implementation(libs.koin.android)
             implementation(libs.kstore)
             implementation(libs.kstore.file)
@@ -141,7 +137,6 @@ kotlin {
         }
 
         iosMain.dependencies {
-            implementation(libs.ktor.client.darwin)
             implementation(libs.kstore)
             implementation(libs.kstore.file)
         }

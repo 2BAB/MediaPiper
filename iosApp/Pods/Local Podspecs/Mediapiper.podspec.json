@@ -15,10 +15,10 @@
   },
   "dependencies": {
     "MediaPipeTasksGenAI": [
-      "0.10.14"
+      "0.10.18"
     ],
     "MediaPipeTasksGenAIC": [
-      "0.10.14"
+      "0.10.18"
     ]
   },
   "xcconfig": {

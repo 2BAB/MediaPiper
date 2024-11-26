@@ -1,10 +1,10 @@
 PODS:
   - Mediapiper (1.0.1):
-    - MediaPipeTasksGenAI (= 0.10.14)
-    - MediaPipeTasksGenAIC (= 0.10.14)
-  - MediaPipeTasksGenAI (0.10.14):
-    - MediaPipeTasksGenAIC (= 0.10.14)
-  - MediaPipeTasksGenAIC (0.10.14)
+    - MediaPipeTasksGenAI (= 0.10.18)
+    - MediaPipeTasksGenAIC (= 0.10.18)
+  - MediaPipeTasksGenAI (0.10.18):
+    - MediaPipeTasksGenAIC (= 0.10.18)
+  - MediaPipeTasksGenAIC (0.10.18)
 
 DEPENDENCIES:
   - Mediapiper (from `../app`)
@@ -19,9 +19,9 @@ EXTERNAL SOURCES:
     :path: "../app"
 
 SPEC CHECKSUMS:
-  Mediapiper: d64d2cb0f33ec905a807ac58291f9695949883c3
-  MediaPipeTasksGenAI: 8cd77fa32ea21f7a6319b025aa28cfc3e20ab73b
-  MediaPipeTasksGenAIC: 270ec81f85e96fac283945702e34112ebbfd5e77
+  Mediapiper: b305eb683357df43379a3d6f9f830706a2e56a74
+  MediaPipeTasksGenAI: e74c38e69e5cb385efc905d14ae7e9af365e69a7
+  MediaPipeTasksGenAIC: 3f6db8973f1351e9258d294113f05e42e7f9eef1
 
 PODFILE CHECKSUM: fb5292835e750a992d246cbe047046c4e4fdc625
 

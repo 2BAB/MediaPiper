@@ -1,31 +1,76 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
-// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -static -O -module-name MediaPipeTasksGenAI
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -static -O -enable-bare-slash-regex -module-name MediaPipeTasksGenAI
 import Foundation
 import MediaPipeTasksGenAIC
 import Swift
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 @objc(MPPLLMInference) final public class LlmInference : ObjectiveC.NSObject {
+  final public var metrics: MediaPipeTasksGenAI.LlmInference.Metrics {
+    get
+  }
   @objc public init(options: MediaPipeTasksGenAI.LlmInference.Options) throws
   @objc convenience public init(modelPath: Swift.String) throws
   @objc final public func generateResponse(inputText: Swift.String) throws -> Swift.String
-  @objc final public func generateResponseAsync(inputText: Swift.String, progress: @escaping (_ partialResponse: Swift.String?, _ error: Swift.Error?) -> Swift.Void, completion: @escaping (() -> Swift.Void)) throws
+  @objc final public func generateResponseAsync(inputText: Swift.String, progress: @escaping (_ partialResponse: Swift.String?, _ error: (any Swift.Error)?) -> Swift.Void, completion: @escaping (() -> Swift.Void)) throws
   @available(iOS 13, macOS 10.15, tvOS 13, watchOS 6, *)
-  final public func generateResponseAsync(inputText: Swift.String) -> _Concurrency.AsyncThrowingStream<Swift.String, Swift.Error>
-  final public func sizeInTokens(text: Swift.String) throws -> Swift.Int
+  final public func generateResponseAsync(inputText: Swift.String) -> _Concurrency.AsyncThrowingStream<Swift.String, any Swift.Error>
   @objc deinit
 }
 extension MediaPipeTasksGenAI.LlmInference {
   @objc(MPPLLMInferenceOptions) final public class Options : ObjectiveC.NSObject {
     @objc final public var modelPath: Swift.String
     @objc final public var maxTokens: Swift.Int
+    @objc final public var maxTopk: Swift.Int
+    @objc final public var supportedLoraRanks: [Swift.Int]
+    @objc final public var waitForWeightUploads: Swift.Bool
+    @objc public init(modelPath: Swift.String)
+    @objc deinit
+  }
+}
+extension MediaPipeTasksGenAI.LlmInference {
+  @objc(MPPLLMInferenceMetrics) final public class Metrics : ObjectiveC.NSObject {
+    @objc final public let initializationTimeInSeconds: Foundation.TimeInterval
+    @objc public init(initializationTimeInSeconds: Foundation.TimeInterval)
+    @objc deinit
+  }
+}
+extension MediaPipeTasksGenAI.LlmInference {
+  @_hasMissingDesignatedInitializers @objc(MPPLLMInferenceSession) final public class Session : ObjectiveC.NSObject {
+    final public var metrics: MediaPipeTasksGenAI.LlmInference.Session.Metrics {
+      get
+    }
+    @objc public init(llmInference: MediaPipeTasksGenAI.LlmInference, options: MediaPipeTasksGenAI.LlmInference.Session.Options) throws
+    @objc convenience public init(llmInference: MediaPipeTasksGenAI.LlmInference) throws
+    @objc final public func addQueryChunk(inputText: Swift.String) throws
+    @objc final public func generateResponse() throws -> Swift.String
+    @objc final public func generateResponseAsync(progress: @escaping (_ partialResponse: Swift.String?, _ error: (any Swift.Error)?) -> Swift.Void, completion: @escaping (() -> Swift.Void)) throws
+    @available(iOS 13, macOS 10.15, tvOS 13, watchOS 6, *)
+    final public func generateResponseAsync() -> _Concurrency.AsyncThrowingStream<Swift.String, any Swift.Error>
+    final public func sizeInTokens(text: Swift.String) throws -> Swift.Int
+    final public func clone() throws -> MediaPipeTasksGenAI.LlmInference.Session
+    @objc deinit
+  }
+}
+extension MediaPipeTasksGenAI.LlmInference.Session {
+  @_inheritsConvenienceInitializers @objc(MPPLLMInferenceSessionOptions) final public class Options : ObjectiveC.NSObject {
     @objc final public var topk: Swift.Int
+    @objc final public var topp: Swift.Float
     @objc final public var temperature: Swift.Float
     @objc final public var randomSeed: Swift.Int
     @objc final public var loraPath: Swift.String?
-    @objc public init(modelPath: Swift.String)
+    @objc override dynamic public init()
+    @objc deinit
+  }
+}
+extension MediaPipeTasksGenAI.LlmInference.Session {
+  @objc(MPPLLMInferenceSessionMetrics) final public class Metrics : ObjectiveC.NSObject {
+    @objc final public var responseGenerationTimeInSeconds: Foundation.TimeInterval {
+      get
+    }
+    @objc public init(responseGenerationTimeInSeconds: Foundation.TimeInterval)
     @objc deinit
   }
 }
@@ -34,6 +79,9 @@ public enum GenAiInferenceError : Swift.Error {
   case illegalMethodCall
   case failedToComputeSizeInTokens(Swift.String?)
   case failedToInitializeSession(Swift.String?)
+  case failedToInitializeEngine(Swift.String?)
+  case failedToAddQueryToSession(Swift.String, Swift.String?)
+  case failedToCloneSession(Swift.String?)
 }
 extension MediaPipeTasksGenAI.GenAiInferenceError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
