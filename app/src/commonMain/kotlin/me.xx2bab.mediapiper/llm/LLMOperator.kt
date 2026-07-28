@@ -4,8 +4,7 @@ import kotlinx.coroutines.flow.Flow
 
 // We suppose the extension is always .bin ,
 // so we don't pass it to the program.
-//const val MODEL_NAME = "gemma-2b-it-gpu-int4"
-const val MODEL_NAME = "gemma-2b-it-cpu-int4"
+const val MODEL_NAME = "gemma-1.1-2b-it-gpu-int4"
 
 const val MODEL_EXTENSION = "bin"
 
